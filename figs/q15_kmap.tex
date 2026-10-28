@@ -1,0 +1,57 @@
+\begin{tikzpicture}[scale=0.85, >=stealth]
+    % Grid
+    \draw[thick] (0,0) grid (4,4);
+    
+    % Header diagonal line and labels
+    \draw[thick] (0,4) -- (-1.1, 4.8);
+    \node at (-0.35, 4.65) {$b_1 b_0$};
+    \node at (-0.85, 4.15) {$b_3 b_2$};
+    
+    % Column labels
+    \node at (0.5, 4.3) {00};
+    \node at (1.5, 4.3) {01};
+    \node at (2.5, 4.3) {11};
+    \node at (3.5, 4.3) {10};
+    
+    % Row labels
+    \node at (-0.4, 3.5) {00};
+    \node at (-0.4, 2.5) {01};
+    \node at (-0.4, 1.5) {11};
+    \node at (-0.4, 0.5) {10};
+    
+    % Row 00 values (m0, m1, m3, m2)
+    \node at (0.5, 3.5) {1};
+    \node at (1.5, 3.5) {0};
+    \node at (2.5, 3.5) {0};
+    \node at (3.5, 3.5) {1};
+    
+    % Row 01 values (m4, m5, m7, m6)
+    \node at (0.5, 2.5) {1};
+    \node at (1.5, 2.5) {0};
+    \node at (2.5, 2.5) {0};
+    \node at (3.5, 2.5) {0};
+    
+    % Row 11 values (m12, m13, m15, m14)
+    \node at (0.5, 1.5) {1};
+    \node at (1.5, 1.5) {0};
+    \node at (2.5, 1.5) {0};
+    \node at (3.5, 1.5) {0};
+    
+    % Row 10 values (m8, m9, m11, m10)
+    \node at (0.5, 0.5) {1};
+    \node at (1.5, 0.5) {0};
+    \node at (2.5, 0.5) {1};
+    \node at (3.5, 0.5) {1};
+    
+    % Group 1: Full Column 00 (m0, m4, m12, m8) - Dotted
+    \draw[thick, dotted, rounded corners=10pt] (0.15, 0.12) rectangle (0.85, 3.88);
+    
+    % Group 2: 4 Corner arcs (m0, m2, m8, m10) - Dotted
+    \draw[thick, dotted, rounded corners=8pt] (0.0, 3.12) -- (0.88, 3.12) -- (0.88, 4.0);
+    \draw[thick, dotted, rounded corners=8pt] (4.0, 3.12) -- (3.12, 3.12) -- (3.12, 4.0);
+    \draw[thick, dotted, rounded corners=8pt] (0.0, 0.88) -- (0.88, 0.88) -- (0.88, 0.0);
+    \draw[thick, dotted, rounded corners=8pt] (4.0, 0.88) -- (3.12, 0.88) -- (3.12, 0.0);
+    
+    % Group 3: Horizontal Pair in Row 10 (m11, m10) - Dotted
+    \draw[thick, dotted, rounded corners=10pt] (2.12, 0.15) rectangle (3.88, 0.85);
+\end{tikzpicture}
