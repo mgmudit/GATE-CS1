@@ -1,0 +1,190 @@
+\begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi]
+
+% 1. Used in Q1 (Dice roll PMF / Z-transform)
+\item Probability Mass Function (PMF) and Z-Transform of Discrete Random Variables:
+\begin{align}
+M_Y(Z) = E[Z^{-Y}] = \sum_k P_Y(k) Z^{-k} \label{eq:CS12025-pmf_ztransform}
+\end{align}
+
+% 2. Used in Q1 (Dice roll triple product)
+\item Z-Transform of Sum of Independent Random Variables $Y = \sum_{i=1}^n Y_i$:
+\begin{align}
+M_Y(Z) = \prod_{i=1}^n M_{Y_i}(Z) \label{eq:CS12025-ztransform_sum}
+\end{align}
+
+% 3. Used in Q2 & Q11 (Fake coin problem)
+\item Bayes' Theorem:
+\begin{align}
+\Pr (E_1|A) = \frac{\Pr (E_1) \Pr (A|E_1)}{\sum_{i=1}^2 \Pr (E_i) \Pr (A|E_i)} \label{eq:CS12025-bayes_theorem}
+\end{align}
+\solution
+Bayes' theorem relates the conditional probability of event $E_1$ given evidence $A$ to the prior probabilities $\Pr(E_1)$ and $\Pr(E_2)$ and the likelihoods $\Pr(A|E_1)$ and $\Pr(A|E_2)$:
+\begin{align}
+\Pr (E_1|A) &= \frac{\Pr(A \cap E_1)}{\Pr(A)} \\
+            &= \frac{\Pr (E_1) \Pr (A|E_1)}{\Pr (E_1) \Pr (A|E_1) + \Pr (E_2) \Pr (A|E_2)} \\
+            &= \frac{\Pr (E_1) \Pr (A|E_1)}{\sum_{i=1}^2 \Pr (E_i) \Pr (A|E_i)}
+\end{align}
+
+% 4. Used in Q3 (Function composition)
+\item Composition of Functions and Surjectivity (Onto Property):
+\begin{align}
+(f \circ g)(x) = f(g(x)), \quad \forall x \in A \label{eq:CS12025-function_composition}
+\end{align}
+
+% 5. Used in Q4 (Spanning tree shortest path)
+\item Shortest Path Inequality in Subgraphs and Spanning Trees:
+If $T$ is a minimum spanning tree of graph $G$, then for any vertices $u, v \in V(G)$:
+\begin{align}
+d_1(u, v) \le d_2(u, v) \label{eq:CS12025-shortest_path_mst}
+\end{align}
+where $d_1(u,v)$ is the shortest path in $G$ and $d_2(u,v)$ is the shortest path in $T$.
+
+% 6. Used in Q5 (Recurrence relation z-transform property)
+\item Z-Transform Property of $n a^n u(n)$:
+\begin{align}
+\mathcal{Z}\{n a^n u(n)\} = \frac{a z^{-1}}{(1 - a z^{-1})^2} \label{eq:CS12025-ztransform_n_an}
+\end{align}
+\solution
+From the foundational definition of the unilateral Z-transform, the Z-transform of the sequence $x(n) = n a^n u(n)$ is given by the infinite series summation:
+\begin{align}
+\mathcal{Z}\{n a^n u(n)\} &= \sum_{n=0}^{\infty} n a^n z^{-n} \\
+                          &= \sum_{n=0}^{\infty} n (a z^{-1})^n
+\end{align}
+
+Let $x = a z^{-1}$. The summation can be expressed as:
+\begin{align}
+S = \sum_{n=0}^{\infty} n x^n
+\end{align}
+
+Taking the standard geometric series identity, which converges for $|x| < 1$:
+\begin{align}
+\sum_{n=0}^{\infty} x^n = \frac{1}{1 - x}
+\end{align}
+
+Differentiating both sides with respect to $x$:
+\begin{align}
+\frac{d}{dx} \left( \sum_{n=0}^{\infty} x^n \right) &= \frac{d}{dx} \left( \frac{1}{1 - x} \right) \\
+\sum_{n=0}^{\infty} n x^{n-1} &= \frac{1}{(1 - x)^2}
+\end{align}
+
+Multiplying both sides by $x$ to match the power of $n x^n$:
+\begin{align}
+\sum_{n=0}^{\infty} n x^n &= \frac{x}{(1 - x)^2}
+\end{align}
+
+Finally, substituting back $x = a z^{-1}$ into the derived expression yields the closed-form Z-transform:
+\begin{align}
+\mathcal{Z}\{n a^n u(n)\} &= \frac{a z^{-1}}{(1 - a z^{-1})^2}
+\end{align}
+
+% 7. Used in Q6 (Linear system consistency)
+\item System of Linear Equations Consistency Analysis:
+For a linear system $\mathbf{A}\mathbf{x} = \mathbf{b}$, the existence and uniqueness of solutions are determined by rank conditions on $\mathbf{A}$ and the augmented matrix $[\mathbf{A} \mid \mathbf{b}]$:
+\begin{align}
+\begin{cases}
+\text{Unique Solution:} & \text{rank}(\mathbf{A}) = \text{rank}([\mathbf{A} \mid \mathbf{b}]) = n \\
+\text{Infinite Solutions:} & \text{rank}(\mathbf{A}) = \text{rank}([\mathbf{A} \mid \mathbf{b}]) < n \\
+\text{No Solution:} & \text{rank}(\mathbf{A}) \neq \text{rank}([\mathbf{A} \mid \mathbf{b}])
+\end{cases}
+\label{eq:CS12025-linear_system_rank}
+\end{align}
+
+% 8. Used in Q9 (Ternary strings without consecutive duplicates)
+\item Number of Strings over Alphabet Size $k$ without Adjacent Duplicate Symbols:
+\begin{align}
+N_{\text{no\_consec}} = k(k-1)^{n-1} \label{eq:CS12025-no_consec_strings}
+\end{align}
+\solution
+For a string of length $n$ defined over an alphabet of size $k$:
+\begin{itemize}
+    \item The first character can be chosen in $k$ different ways.
+    \item For each subsequent position from $2$ to $n$, the character must be distinct from the immediately preceding character, giving $(k-1)$ choices per position.
+\end{itemize}
+By the fundamental counting principle, the total number of such strings is:
+\begin{align}
+N_{\text{no\_consec}} = k \times \underbrace{(k-1) \times (k-1) \times \dots \times (k-1)}_{n-1 \text{ times}} = k(k-1)^{n-1}
+\end{align}
+
+% 9. Used in Q10 (Piecewise function boundary conditions)
+\item Boundary Continuity and Differentiability Conditions for Piecewise Functions:
+\begin{align}
+\lim_{x \to x_0^-} f(x) &= \lim_{x \to x_0^+} f(x) = f(x_0) \label{eq:CS12025-piecewise_continuity} \\
+\lim_{x \to x_0^-} f'(x) &= \lim_{x \to x_0^+} f'(x) \label{eq:CS12025-piecewise_differentiability}
+\end{align}
+
+% 10. Used in Q12 (Bubble sort swaps)
+\item Total Inversions (Swaps) in a Reverse-Sorted Array of Size $n$:
+\begin{align}
+\text{Swaps} = \frac{n(n-1)}{2} \label{eq:CS12025-bubble_sort_swaps}
+\end{align}
+\solution
+For an array of size $n$ sorted in strictly descending order, every adjacent pair satisfies $A[j] > A[j+1]$. The total number of swap operations is the sum of comparisons across all passes:
+\begin{align}
+\text{Swaps} &= \sum_{i=0}^{n-2} (n - i - 1) \\
+             &= (n - 1) + (n - 2) + \dots + 2 + 1 \\
+             &= \frac{n(n-1)}{2}
+\end{align}
+
+% 11. Used in Q14 (Eigenvalues of matrix powers)
+\item Matrix Characteristic Equation and Eigenvalues of Powers:
+The eigenvalues $\lambda$ of $\mathbf{A}$ satisfy $\det(\mathbf{A} - \lambda \mathbf{I}) = 0$. For any positive integer $k$:
+\begin{align}
+\mathbf{A}\mathbf{x} = \lambda \mathbf{x} \implies \mathbf{A}^k \mathbf{x} = \lambda^k \mathbf{x} \label{eq:CS12025-eigenvalue_power}
+\end{align}
+\solution
+Given the eigenvalue definition $\mathbf{A}\mathbf{x} = \lambda \mathbf{x}$, multiplying by $\mathbf{A}$ successively $k$ times gives:
+\begin{align}
+\mathbf{A}^2 \mathbf{x} &= \mathbf{A}(\mathbf{A}\mathbf{x}) \\
+                        &= \mathbf{A}(\lambda \mathbf{x}) \\
+                        &= \lambda (\mathbf{A}\mathbf{x}) \\
+                        &= \lambda^2 \mathbf{x}
+\end{align}
+Extending this result by mathematical induction for any positive integer $k$:
+\begin{align}
+\mathbf{A}^k \mathbf{x} = \lambda^k \mathbf{x}
+\end{align}
+
+% 12. Used in Q16 (BFS tree height)
+\item Minimum Height of Breadth-First-Search (BFS) Tree given Graph Diameter $D$:
+\begin{align}
+h(T) \ge \left\lceil \frac{D}{2} \right\rceil \label{eq:CS12025-bfs_tree_height}
+\end{align}
+
+% 13. Used in Q18 (Basic block leaders)
+\item Basic Block Leader Criteria in Compiler Intermediate Code:
+\begin{align}
+\text{Leaders} = \{\text{First Instruction}\} \cup \{\text{Targets of Jumps}\} \cup \{\text{Instructions Following Jumps}\} \label{eq:CS12025-basic_block_leaders}
+\end{align}
+
+% 14. Used in Q21 (PDF normalization)
+\item Continuous Probability Density Function (PDF) Normalization:
+\begin{align}
+\int_{-\infty}^{\infty} P(x) \, dx = 1 \label{eq:CS12025-pdf_normalization}
+\end{align}
+
+% 15. Used in Q21 (CDF range probability)
+\item Cumulative Distribution Function (CDF) and Range Probability:
+\begin{align}
+F_X(x) = \int_{-\infty}^x P(t) \, dt, \quad P(a \le X \le b) = F_X(b) - F_X(a) = \int_a^b P(x) \, dx \label{eq:CS12025-cdf_range_probability}
+\end{align}
+\solution
+The Cumulative Distribution Function (CDF) $F_X(x)$ accumulates the probability density from the lower support limit up to $x$. The probability that a continuous random variable $X$ falls within the interval $[a, b]$ is obtained by evaluating the definite integral of the probability density function $P(x)$, which equals the difference in CDF values:
+\begin{align}
+P(a \le X \le b) &= \int_a^b P(x) \, dx \\
+                 &= \int_{-\infty}^b P(x) \, dx - \int_{-\infty}^a P(x) \, dx \\
+                 &= F_X(b) - F_X(a)
+\end{align}
+
+% 16. Used in Q28 (Double hashing)
+\item Open Addressing Double Hashing Probe Sequence:
+\begin{align}
+h(k, i) = \left[ h_1(k) + i \cdot h_2(k) \right] \bmod m \label{eq:CS12025-double_hashing}
+\end{align}
+\solution
+In open addressing with double hashing, when a collision occurs at the primary hash location $h_1(k)$, subsequent probe locations are determined by adding a step size governed by the second auxiliary hash function $h_2(k)$ multiplied by the probe index $i$:
+\begin{align}
+h(k, i) = \left( h_1(k) + i \cdot h_2(k) \right) \bmod m
+\end{align}
+where $m$ is the hash table size and $i \in \{0, 1, \dots, m-1\}$. To ensure all slots can be probed, $h_2(k)$ must be relatively prime to $m$.
+
+\end{enumerate}
