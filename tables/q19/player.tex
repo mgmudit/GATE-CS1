@@ -1,0 +1,112 @@
+\def\ifundefined#1{\expandafter\ifx\csname#1\endcsname\relax}
+
+\ifundefined{inputGnumericTable}
+
+	\def\gnumericTableEnd{\end{document}}
+
+	\documentclass[12pt]{report}
+       \usepackage[latin1]{inputenc}
+       \usepackage{fullpage}
+       \usepackage{color}
+       \usepackage{array}
+       \usepackage{longtable}
+       \usepackage{calc}
+       \usepackage{multirow}
+       \usepackage{hhline}
+       \usepackage{ifthen}
+
+	\begin{document}
+
+\else
+
+    \def\gnumericTableEnd{}
+
+\fi
+
+\providecommand{\gnumericmathit}[1]{#1} 
+\providecommand{\gnumericPB}[1]%
+{\let\gnumericTemp=\\#1\let\\=\gnumericTemp\hspace{0pt}}
+ \ifundefined{gnumericTableWidthDefined}
+        \newlength{\gnumericTableWidth}
+        \newlength{\gnumericTableWidthComplete}
+        \newlength{\gnumericMultiRowLength}
+        \global\def\gnumericTableWidthDefined{}
+ \fi
+ \ifthenelse{\isundefined{\languageshorthands}}{}{\languageshorthands{english}}
+\providecommand\gnumbox{\makebox[0pt]}
+
+\setlength{\bigstrutjot}{\jot}
+\setlength{\extrarowheight}{\doublerulesep}
+
+\setlongtables
+
+\setlength\gnumericTableWidth{%
+	45pt+%
+	65pt+%
+	45pt+%
+0pt}
+\def\gumericNumCols{3}
+\setlength\gnumericTableWidthComplete{\gnumericTableWidth+%
+         \tabcolsep*\gumericNumCols*2+\arrayrulewidth*\gumericNumCols}
+\ifthenelse{\lengthtest{\gnumericTableWidthComplete > \linewidth}}%
+         {\def\gnumericScale{1*\ratio{\linewidth-%
+                        \tabcolsep*\gumericNumCols*2-%
+                        \arrayrulewidth*\gumericNumCols}%
+{\gnumericTableWidth}}}%
+{\def\gnumericScale{1}}
+
+\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{45pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{65pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{45pt*\gnumericScale}@{}}x\end{tabular}}
+
+\begin{longtable}[c]{%
+	b{\gnumericColA}%
+	b{\gnumericColB}%
+	b{\gnumericColC}%
+	}
+
+\hhline{|-|-|-|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{pid}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{pname}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{age}}
+\\
+\hhline{|---| architecture}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\raggedleft}\gnumbox[r]{1}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{Jasprit}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\raggedleft}\gnumbox[r]{31}}
+\\
+\hhline{|---| architecture}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\raggedleft}\gnumbox[r]{2}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{Atharva}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\raggedleft}\gnumbox[r]{24}}
+\\
+\hhline{|---| architecture}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\raggedleft}\gnumbox[r]{3}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{Ishan}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\raggedleft}\gnumbox[r]{26}}
+\\
+\hhline{|---| architecture}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\raggedleft}\gnumbox[r]{4}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{Axar}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\raggedleft}\gnumbox[r]{30}}
+\\
+\hhline{|-|-|-|}
+\end{longtable}
+
+\ifthenelse{\isundefined{\languageshorthands}}{}{\languageshorthands{\languagename}}
+\gnumericTableEnd

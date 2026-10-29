@@ -1,0 +1,115 @@
+\def\ifundefined#1{\expandafter\ifx\csname#1\endcsname\relax}
+
+\ifundefined{inputGnumericTable}
+
+	\def\gnumericTableEnd{\end{document}}
+
+	\documentclass[12pt]{report}
+       \usepackage[latin1]{inputenc}
+       \usepackage{fullpage}
+       \usepackage{color}
+       \usepackage{array}
+       \usepackage{longtable}
+       \usepackage{calc}
+       \usepackage{multirow}
+       \usepackage{hhline}
+       \usepackage{ifthen}
+
+	\begin{document}
+
+\else
+
+    \def\gnumericTableEnd{}
+
+\fi
+
+\providecommand{\gnumericmathit}[1]{#1} 
+\providecommand{\gnumericPB}[1]%
+{\let\gnumericTemp=\\#1\let\\=\gnumericTemp\hspace{0pt}}
+ \ifundefined{gnumericTableWidthDefined}
+        \newlength{\gnumericTableWidth}
+        \newlength{\gnumericTableWidthComplete}
+        \newlength{\gnumericMultiRowLength}
+        \global\def\gnumericTableWidthDefined{}
+ \fi
+ \ifthenelse{\isundefined{\languageshorthands}}{}{\languageshorthands{english}}
+\providecommand\gnumbox{\makebox[0pt]}
+
+\setlength{\bigstrutjot}{\jot}
+\setlength{\extrarowheight}{\doublerulesep}
+
+\setlongtables
+
+\setlength\gnumericTableWidth{%
+	45pt+%
+	45pt+%
+	55pt+%
+	45pt+%
+0pt}
+\def\gumericNumCols{4}
+\setlength\gnumericTableWidthComplete{\gnumericTableWidth+%
+         \tabcolsep*\gumericNumCols*2+\arrayrulewidth*\gumericNumCols}
+\ifthenelse{\lengthtest{\gnumericTableWidthComplete > \linewidth}}%
+         {\def\gnumericScale{1*\ratio{\linewidth-%
+                        \tabcolsep*\gumericNumCols*2-%
+                        \arrayrulewidth*\gumericNumCols}%
+{\gnumericTableWidth}}}%
+{\def\gnumericScale{1}}
+
+\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{45pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{45pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{55pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColD}}{\newlength{\gnumericColD}}{}\settowidth{\gnumericColD}{\begin{tabular}{@{}p{45pt*\gnumericScale}@{}}x\end{tabular}}
+
+\begin{longtable}[c]{%
+	b{\gnumericColA}%
+	b{\gnumericColB}%
+	b{\gnumericColC}%
+	b{\gnumericColD}%
+	}
+
+\hhline{|-|-|-|-|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{tid}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{tname}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{city}}
+	&\multicolumn{1}{p{\gnumericColD}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{cid}}
+\\
+\hhline{|----|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\raggedleft}\gnumbox[r]{10}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{MI}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{Mumbai}}
+	&\multicolumn{1}{p{\gnumericColD}|}%
+	{\gnumericPB{\raggedleft}\gnumbox[r]{102}}
+\\
+\hhline{|----|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\raggedleft}\gnumbox[r]{20}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{DC}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{Delhi}}
+	&\multicolumn{1}{p{\gnumericColD}|}%
+	{\gnumericPB{\raggedleft}\gnumbox[r]{101}}
+\\
+\hhline{|----|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\raggedleft}\gnumbox[r]{30}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{PK}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\raggedright}\gnumbox[l]{Mohali}}
+	&\multicolumn{1}{p{\gnumericColD}|}%
+	{\gnumericPB{\raggedleft}\gnumbox[r]{103}}
+\\
+\hhline{|-|-|-|-|}
+\end{longtable}
+
+\ifthenelse{\isundefined{\languageshorthands}}{}{\languageshorthands{\languagename}}
+\gnumericTableEnd
