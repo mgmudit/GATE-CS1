@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from math import comb
 
 # Sample size
 simlen = 10000
@@ -21,9 +22,6 @@ psim = np.zeros(4)
 psim[unique] = counts / simlen
 
 # Theoretical PMF
-# P(X = k) = C(3,k) * (1/6)^k * (5/6)^(3-k)
-from math import comb
-
 panal = np.array([
     comb(3, k) * (1/6)**k * (5/6)**(3-k)
     for k in n
@@ -50,6 +48,5 @@ plt.title('PMF: Three Die Rolls')
 plt.legend()
 plt.grid()
 
-plt.savefig('pmf_plot.pdf')
+plt.savefig('../figs/pmf_plot.pdf')
 plt.show()
-

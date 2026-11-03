@@ -23,6 +23,6 @@ plt.ylim(-0.05, 1.05)
 plt.legend()
 
 # Save the figure locally
-filename = 'cdf_plot.pdf'
+filename = '../figs/cdf_plot.pdf'
 plt.savefig(filename, dpi=300, bbox_inches='tight')
 plt.close()

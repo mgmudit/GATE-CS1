@@ -46,11 +46,10 @@ plt.legend(fontsize=10)
 plt.tight_layout()
 
 # 3. Save plot to file
-image_name = "graph.pdf"
+image_name = "../figs/graph.pdf"
 plt.savefig(image_name, dpi=300)
-plt.close()  # Close plot memory without calling plt.show()
+plt.close()
 
 # 4. Automatically open the image on Android/Termux
 if os.system(f"termux-open {image_name}") != 0:
-    # Fallback for Linux/Mac/Windows if not running in Termux
     os.system(f"xdg-open {image_name} || open {image_name}")

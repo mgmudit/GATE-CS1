@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import subprocess
 import sympy as sp
 import sys
 
@@ -56,5 +55,5 @@ plt.title(f"System of equations for k = {k}")
 plt.grid(True)
 plt.legend()
 
-plt.savefig("intersec.pdf")
+plt.savefig("../figs/intersec.pdf")
 plt.close()

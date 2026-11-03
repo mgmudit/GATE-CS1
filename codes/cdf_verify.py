@@ -60,6 +60,6 @@ ax.legend(loc='upper left', frameon=True, facecolor='white', framealpha=0.9, fon
 plt.tight_layout()
 
 # Save image file
-output_filename = 'cdf_grid_verification.pdf'
+output_filename = '../figs/cdf_grid_verification.pdf'
 plt.savefig(output_filename)
 plt.close()

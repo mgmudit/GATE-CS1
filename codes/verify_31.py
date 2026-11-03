@@ -1,7 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import subprocess
-import shlex
 import sys
 import os
 
@@ -33,9 +31,5 @@ plt.plot(x, y, label="x^3 + x^2 + 1")
 plt.axvline(1, linestyle="--", alpha=0.5)
 plt.grid()
 plt.legend()
-plt.savefig("plot.pdf")
+plt.savefig("../figs/plot.pdf")
 plt.close()
-
-# Open the generated plot in Termux
-subprocess.run(shlex.split("open plot.pdf"))
-
