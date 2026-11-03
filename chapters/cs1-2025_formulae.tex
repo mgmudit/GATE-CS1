@@ -1,18 +1,33 @@
-\begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi]
+\begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, itemsep=0.5cm]
 
-% 1. Used in Q1 (Dice roll PMF / Z-transform)
+% 1. Foundational Definition of Z-Transform
+\item Foundational Definition of the Unilateral Z-Transform:
+\begin{align}
+\mathcal{Z}\{x(n)\} = X(z) = \sum_{n=0}^{\infty} x(n) z^{-n} \label{eq:CS12025-ztransform_def}
+\end{align}
+
+% 2. Used in Q1 (Dice roll PMF / Z-transform)
 \item Probability Mass Function (PMF) and Z-Transform of Discrete Random Variables:
 \begin{align}
 M_Y(Z) = E[Z^{-Y}] = \sum_k P_Y(k) Z^{-k} \label{eq:CS12025-pmf_ztransform}
 \end{align}
 
-% 2. Used in Q1 (Dice roll triple product)
+% 3. Used in Q1 (Dice roll triple product)
 \item Z-Transform of Sum of Independent Random Variables $Y = \sum_{i=1}^n Y_i$:
 \begin{align}
 M_Y(Z) = \prod_{i=1}^n M_{Y_i}(Z) \label{eq:CS12025-ztransform_sum}
 \end{align}
+\solution
+For $n$ independent discrete random variables $Y_1, Y_2, \dots, Y_n$, the sum is given by $Y = \sum_{i=1}^n Y_i$. Applying the foundational Z-transform definition from (\ref{eq:CS12025-ztransform_def}):
+\begin{align}
+M_Y(Z) = E[Z^{-Y}] = E\left[Z^{-\sum_{i=1}^n Y_i}\right] = E\left[\prod_{i=1}^n Z^{-Y_i}\right]
+\end{align}
+Since the random variables $Y_1, Y_2, \dots, Y_n$ are mutually independent, the expectation of their product equals the product of their individual expectations:
+\begin{align}
+M_Y(Z) = \prod_{i=1}^n E[Z^{-Y_i}] = \prod_{i=1}^n M_{Y_i}(Z)
+\end{align}
 
-% 3. Used in Q2 & Q11 (Fake coin problem)
+% 4. Used in Q2 & Q11 (Fake coin problem)
 \item Bayes' Theorem:
 \begin{align}
 \Pr (E_1|A) = \frac{\Pr (E_1) \Pr (A|E_1)}{\sum_{i=1}^2 \Pr (E_i) \Pr (A|E_i)} \label{eq:CS12025-bayes_theorem}
@@ -25,13 +40,13 @@ Bayes' theorem relates the conditional probability of event $E_1$ given evidence
             &= \frac{\Pr (E_1) \Pr (A|E_1)}{\sum_{i=1}^2 \Pr (E_i) \Pr (A|E_i)}
 \end{align}
 
-% 4. Used in Q3 (Function composition)
+% 5. Used in Q3 (Function composition)
 \item Composition of Functions and Surjectivity (Onto Property):
 \begin{align}
 (f \circ g)(x) = f(g(x)), \quad \forall x \in A \label{eq:CS12025-function_composition}
 \end{align}
 
-% 5. Used in Q4 (Spanning tree shortest path)
+% 6. Used in Q4 (Spanning tree shortest path)
 \item Shortest Path Inequality in Subgraphs and Spanning Trees:
 If $T$ is a minimum spanning tree of graph $G$, then for any vertices $u, v \in V(G)$:
 \begin{align}
@@ -39,13 +54,13 @@ d_1(u, v) \le d_2(u, v) \label{eq:CS12025-shortest_path_mst}
 \end{align}
 where $d_1(u,v)$ is the shortest path in $G$ and $d_2(u,v)$ is the shortest path in $T$.
 
-% 6. Used in Q5 (Recurrence relation z-transform property)
+% 7. Used in Q5 (Recurrence relation z-transform property)
 \item Z-Transform Property of $n a^n u(n)$:
 \begin{align}
 \mathcal{Z}\{n a^n u(n)\} = \frac{a z^{-1}}{(1 - a z^{-1})^2} \label{eq:CS12025-ztransform_n_an}
 \end{align}
 \solution
-From the foundational definition of the unilateral Z-transform, the Z-transform of the sequence $x(n) = n a^n u(n)$ is given by the infinite series summation:
+From the foundational definition of the unilateral Z-transform in (\ref{eq:CS12025-ztransform_def}), the Z-transform of the sequence $x(n) = n a^n u(n)$ is given by the infinite series summation:
 \begin{align}
 \mathcal{Z}\{n a^n u(n)\} &= \sum_{n=0}^{\infty} n a^n z^{-n} \\
                           &= \sum_{n=0}^{\infty} n (a z^{-1})^n
@@ -77,7 +92,97 @@ Finally, substituting back $x = a z^{-1}$ into the derived expression yields the
 \mathcal{Z}\{n a^n u(n)\} &= \frac{a z^{-1}}{(1 - a z^{-1})^2}
 \end{align}
 
-% 7. Used in Q6 (Linear system consistency)
+% 8. Used in binomial identities & z-transforms
+\item Binomial Coefficient Symmetry Identity:
+\begin{align}
+\binom{n}{k} = \binom{n}{n-k} \label{eq:CS12025-binomial_symmetry}
+\end{align}
+\solution
+Using the factorial definition of the binomial coefficient for $0 \le k \le n$:
+\begin{align}
+\binom{n}{k} = \frac{n!}{k!(n-k)!}
+\end{align}
+Substituting $(n-k)$ in place of $k$:
+\begin{align}
+\binom{n}{n-k} = \frac{n!}{(n-k)!(n - (n-k))!} = \frac{n!}{(n-k)!k!}
+\end{align}
+Since multiplication in the denominator is commutative:
+\begin{align}
+\binom{n}{k} = \binom{n}{n-k}
+\end{align}
+
+% 9. Used in negative binomial expansion
+\item Negative Binomial Coefficient Identity:
+\begin{align}
+\binom{-n}{k} = (-1)^k \binom{n+k-1}{k} \label{eq:CS12025-neg_binomial_coef}
+\end{align}
+\solution
+Extending the binomial coefficient definition to negative integer upper index $-n$ and non-negative integer $k$:
+\begin{align}
+\binom{-n}{k} = \frac{(-n)(-n-1)(-n-2)\dots(-n-k+1)}{k!}
+\end{align}
+Factoring out $(-1)$ from each of the $k$ factors in the numerator:
+\begin{align}
+(-n)(-n-1)(-n-2)\dots(-n-k+1) &= (-1)^k n(n+1)(n+2)\dots(n+k-1) \\
+&= (-1)^k \frac{(n+k-1)!}{(n-1)!}
+\end{align}
+Substituting this back into the denominator $k!$:
+\begin{align}
+\binom{-n}{k} &= (-1)^k \frac{(n+k-1)!}{(n-1)!k!} \\
+&= (-1)^k \binom{n+k-1}{k}
+\end{align}
+
+% 10. Used in inverse z-transforms & power series expansions
+\item Generalized Binomial Expansion Series in Summation Form:
+\begin{align}
+(1 - x)^{-n} = \sum_{k=0}^{\infty} \binom{n+k-1}{k} x^k, \quad \text{for } |x| < 1 \label{eq:CS12025-binomial_series_sum}
+\end{align}
+\solution
+By Taylor series expansion for any real power $-n$ and $|x| < 1$:
+\begin{align}
+(1 - x)^{-n} = \sum_{k=0}^{\infty} \binom{-n}{k} (-x)^k
+\end{align}
+Using the negative binomial coefficient identity from (\ref{eq:CS12025-neg_binomial_coef}):
+\begin{align}
+\binom{-n}{k} (-x)^k &= \left[ (-1)^k \binom{n+k-1}{k} \right] (-1)^k x^k \\
+&= (-1)^{2k} \binom{n+k-1}{k} x^k \\
+&= \binom{n+k-1}{k} x^k
+\end{align}
+Substituting this back yields the closed-form summation:
+\begin{align}
+(1 - x)^{-n} = \sum_{k=0}^{\infty} \binom{n+k-1}{k} x^k
+\end{align}
+
+% 11. Used in Q5 (Inverse Z-transform of general power term)
+\item Inverse Z-Transform of $\dfrac{1}{(1 - a z^{-1})^n}$ for Integer $n > 0$:
+\begin{align}
+\mathcal{Z}^{-1}\left\{\frac{1}{(1 - a z^{-1})^n}\right\} = \binom{n + k - 1}{n - 1} a^k u(k) \label{eq:CS12025-inverse_z_power}
+\end{align}
+\solution
+Writing the fraction in negative exponent form:
+\begin{align}
+\frac{1}{(1 - a z^{-1})^n} = (1 - a z^{-1})^{-n}
+\end{align}
+Letting $x = a z^{-1}$, where $|a z^{-1}| < 1$, we apply the generalized binomial series expansion from (\ref{eq:CS12025-binomial_series_sum}):
+\begin{align}
+(1 - a z^{-1})^{-n} = \sum_{k=0}^{\infty} \binom{n+k-1}{k} (a z^{-1})^k = \sum_{k=0}^{\infty} \binom{n+k-1}{k} a^k z^{-k}
+\end{align}
+Using the symmetry property of binomial coefficients from (\ref{eq:CS12025-binomial_symmetry}), we have $\binom{n+k-1}{k} = \binom{n+k-1}{(n+k-1) - k} = \binom{n+k-1}{n-1}$:
+\begin{align}
+\frac{1}{(1 - a z^{-1})^n} = \sum_{k=0}^{\infty} \binom{n + k - 1}{n - 1} a^k z^{-k}
+\end{align}
+Taking the inverse Z-transform by comparing with (\ref{eq:CS12025-ztransform_def}):
+\begin{align}
+\mathcal{Z}^{-1}\left\{\frac{1}{(1 - a z^{-1})^n}\right\} = \binom{n + k - 1}{n - 1} a^k u(k)
+\end{align}
+Special cases for $n = 1, 2, 3$:
+\begin{itemize}
+    \item $n = 1$: $\mathcal{Z}^{-1}\left\{\frac{1}{1 - a z^{-1}}\right\} = \binom{k}{0} a^k u(k) = a^k u(k)$
+    \item $n = 2$: $\mathcal{Z}^{-1}\left\{\frac{1}{(1 - a z^{-1})^2}\right\} = \binom{k+1}{1} a^k u(k) = (k+1) a^k u(k)$
+    \item $n = 3$: $\mathcal{Z}^{-1}\left\{\frac{1}{(1 - a z^{-1})^3}\right\} = \binom{k+2}{2} a^k u(k) = \frac{(k+1)(k+2)}{2} a^k u(k)$
+\end{itemize}
+
+% 12. Used in Q6 (Linear system consistency)
 \item System of Linear Equations Consistency Analysis:
 For a linear system $\mathbf{A}\mathbf{x} = \mathbf{b}$, the existence and uniqueness of solutions are determined by rank conditions on $\mathbf{A}$ and the augmented matrix $[\mathbf{A} \mid \mathbf{b}]$:
 \begin{align}
@@ -89,7 +194,7 @@ For a linear system $\mathbf{A}\mathbf{x} = \mathbf{b}$, the existence and uniqu
 \label{eq:CS12025-linear_system_rank}
 \end{align}
 
-% 8. Used in Q9 (Ternary strings without consecutive duplicates)
+% 13. Used in Q9 (Ternary strings without consecutive duplicates)
 \item Number of Strings over Alphabet Size $k$ without Adjacent Duplicate Symbols:
 \begin{align}
 N_{\text{no\_consec}} = k(k-1)^{n-1} \label{eq:CS12025-no_consec_strings}
@@ -105,14 +210,14 @@ By the fundamental counting principle, the total number of such strings is:
 N_{\text{no\_consec}} = k \times \underbrace{(k-1) \times (k-1) \times \dots \times (k-1)}_{n-1 \text{ times}} = k(k-1)^{n-1}
 \end{align}
 
-% 9. Used in Q10 (Piecewise function boundary conditions)
+% 14. Used in Q10 (Piecewise function boundary conditions)
 \item Boundary Continuity and Differentiability Conditions for Piecewise Functions:
 \begin{align}
 \lim_{x \to x_0^-} f(x) &= \lim_{x \to x_0^+} f(x) = f(x_0) \label{eq:CS12025-piecewise_continuity} \\
 \lim_{x \to x_0^-} f'(x) &= \lim_{x \to x_0^+} f'(x) \label{eq:CS12025-piecewise_differentiability}
 \end{align}
 
-% 10. Used in Q12 (Bubble sort swaps)
+% 15. Used in Q12 (Bubble sort swaps)
 \item Total Inversions (Swaps) in a Reverse-Sorted Array of Size $n$:
 \begin{align}
 \text{Swaps} = \frac{n(n-1)}{2} \label{eq:CS12025-bubble_sort_swaps}
@@ -125,7 +230,7 @@ For an array of size $n$ sorted in strictly descending order, every adjacent pai
              &= \frac{n(n-1)}{2}
 \end{align}
 
-% 11. Used in Q14 (Eigenvalues of matrix powers)
+% 16. Used in Q14 (Eigenvalues of matrix powers)
 \item Matrix Characteristic Equation and Eigenvalues of Powers:
 The eigenvalues $\lambda$ of $\mathbf{A}$ satisfy $\det(\mathbf{A} - \lambda \mathbf{I}) = 0$. For any positive integer $k$:
 \begin{align}
@@ -144,25 +249,25 @@ Extending this result by mathematical induction for any positive integer $k$:
 \mathbf{A}^k \mathbf{x} = \lambda^k \mathbf{x}
 \end{align}
 
-% 12. Used in Q16 (BFS tree height)
+% 17. Used in Q16 (BFS tree height)
 \item Minimum Height of Breadth-First-Search (BFS) Tree given Graph Diameter $D$:
 \begin{align}
 h(T) \ge \left\lceil \frac{D}{2} \right\rceil \label{eq:CS12025-bfs_tree_height}
 \end{align}
 
-% 13. Used in Q18 (Basic block leaders)
+% 18. Used in Q18 (Basic block leaders)
 \item Basic Block Leader Criteria in Compiler Intermediate Code:
 \begin{align}
 \text{Leaders} = \{\text{First Instruction}\} \cup \{\text{Targets of Jumps}\} \cup \{\text{Instructions Following Jumps}\} \label{eq:CS12025-basic_block_leaders}
 \end{align}
 
-% 14. Used in Q21 (PDF normalization)
+% 19. Used in Q21 (PDF normalization)
 \item Continuous Probability Density Function (PDF) Normalization:
 \begin{align}
 \int_{-\infty}^{\infty} P(x) \, dx = 1 \label{eq:CS12025-pdf_normalization}
 \end{align}
 
-% 15. Used in Q21 (CDF range probability)
+% 20. Used in Q21 (CDF range probability)
 \item Cumulative Distribution Function (CDF) and Range Probability:
 \begin{align}
 F_X(x) = \int_{-\infty}^x P(t) \, dt, \quad P(a \le X \le b) = F_X(b) - F_X(a) = \int_a^b P(x) \, dx \label{eq:CS12025-cdf_range_probability}
@@ -175,7 +280,7 @@ P(a \le X \le b) &= \int_a^b P(x) \, dx \\
                  &= F_X(b) - F_X(a)
 \end{align}
 
-% 16. Used in Q28 (Double hashing)
+% 21. Used in Q28 (Double hashing)
 \item Open Addressing Double Hashing Probe Sequence:
 \begin{align}
 h(k, i) = \left[ h_1(k) + i \cdot h_2(k) \right] \bmod m \label{eq:CS12025-double_hashing}
