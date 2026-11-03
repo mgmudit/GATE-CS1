@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.10.8)  29 OCT 2026 14:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.10.8)  3 NOV 2026 10:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1384,102 +1384,71 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 [2] (./chapters/cs1-2025_formulae.tex [3
 
-] [4]
-Overfull \hbox (8.57706pt too wide) detected at line 157
+] [4] [5] [6] [7]
+Overfull \hbox (8.57706pt too wide) detected at line 262
 []
  []
 
-[5]) (./chapters/cs1-2025_problems.tex [6]
+[8]) (./chapters/cs1-2025_problems.tex
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.22 \end{align}
-                 [7]
+                 [9]
+<figs/pmf_plot.pdf, id=203, 462.52798pt x 346.89601pt>
+File: figs/pmf_plot.pdf Graphic file (type pdf)
+<use figs/pmf_plot.pdf>
+Package pdftex.def Info: figs/pmf_plot.pdf  used on input line 65.
+(pdftex.def)             Requested size: 273.14647pt x 204.86801pt.
+[10]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.78 \end{align}
-                 [8]
+l.89 \end{align}
+                 [11 <./figs/pmf_plot.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.133 \end{align}
-                 
+l.144 \end{align}
+                  [12]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.5.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.155 \end{align}
-                  [9]
-<figs/graph.pdf, id=209, 650.43pt x 361.35pt>
+l.166 \end{align}
+                 
+<figs/graph.pdf, id=315, 650.43pt x 361.35pt>
 File: figs/graph.pdf Graphic file (type pdf)
 <use figs/graph.pdf>
-Package pdftex.def Info: figs/graph.pdf  used on input line 201.
+Package pdftex.def Info: figs/graph.pdf  used on input line 205.
 (pdftex.def)             Requested size: 273.14647pt x 151.74942pt.
-[10]
+[13]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.6.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.239 \end{align}
-                 
-pdfTeX warning (ext4): destination with the same identifier (name{equation.6.2}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.248 \end{align}
-                 
-pdfTeX warning (ext4): destination with the same identifier (name{equation.6.3}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.257 \end{align}
-                  [11 <./figs/graph.pdf>]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.6.4}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.267 \end{align}
-                 
-pdfTeX warning (ext4): destination with the same identifier (name{equation.6.5}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.267 \end{align}
-                 
-pdfTeX warning (ext4): destination with the same identifier (name{equation.6.6}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.275 \end{align}
-                 
-pdfTeX warning (ext4): destination with the same identifier (name{equation.6.7}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.283 \end{align}
-                 
-pdfTeX warning (ext4): destination with the same identifier (name{equation.6.8}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.292 \end{align}
-                 
-pdfTeX warning (ext4): destination with the same identifier (name{equation.6.9}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.292 \end{align}
-                 
-<figs/intersec.pdf, id=294, 462.52798pt x 346.89601pt>
+l.243 \end{align}
+                  [14 <./figs/graph.pdf>]
+<figs/intersec.pdf, id=406, 462.52798pt x 346.89601pt>
 File: figs/intersec.pdf Graphic file (type pdf)
 <use figs/intersec.pdf>
-Package pdftex.def Info: figs/intersec.pdf  used on input line 310.
+Package pdftex.def Info: figs/intersec.pdf  used on input line 314.
 (pdftex.def)             Requested size: 273.14647pt x 204.86801pt.
-[12] (./tables/q7/truth_table.tex
+<figs/coincide.pdf, id=407, 462.52798pt x 346.89601pt>
+File: figs/coincide.pdf Graphic file (type pdf)
+<use figs/coincide.pdf>
+Package pdftex.def Info: figs/coincide.pdf  used on input line 320.
+(pdftex.def)             Requested size: 273.14647pt x 204.86801pt.
+[15]
+<figs/parallel.pdf, id=425, 462.52798pt x 346.89601pt>
+File: figs/parallel.pdf Graphic file (type pdf)
+<use figs/parallel.pdf>
+Package pdftex.def Info: figs/parallel.pdf  used on input line 326.
+(pdftex.def)             Requested size: 273.14647pt x 204.86801pt.
+[16 <./figs/intersec.pdf> <./figs/coincide.pdf>] (./tables/q7/truth_table.tex
 \gnumericTableWidth=\skip78
 \gnumericTableWidthComplete=\skip79
 \gnumericMultiRowLength=\skip80
@@ -1487,105 +1456,183 @@ Package pdftex.def Info: figs/intersec.pdf  used on input line 310.
 \gnumericColB=\skip82
 \gnumericColC=\skip83
 \gnumericColD=\skip84
-) [13 <./figs/intersec.pdf>] (./figs/q7_kmap.tex)
+) (./figs/q7_kmap.tex) [17 <./figs/parallel.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.7.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.357 \end{align}
-                  [14]
+l.368 \end{align}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{equation.7.2}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.382     \end{align}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.7.3}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.382     \end{align}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.7.4}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.382     \end{align}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.7.5}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.382     \end{align}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.7.6}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.382     \end{align}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.7.7}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.382     \end{align}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.7.8}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.392     \end{align}
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{equation.7.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.392     \end{align}
+                      [18]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.431 \end{align}
+l.447 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8.2}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.436 \end{align}
-                  [15]
+l.452 \end{align}
+                  [19]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.9.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.450 \end{align}
+l.472 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.9.2}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.456 \end{align}
+l.478 \end{align}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{equation.9.3}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.478 \end{align}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{equation.9.4}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.478 \end{align}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{equation.9.5}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.483 \end{align}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{equation.9.6}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.483 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.10.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.479 \end{align}
+l.507 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.10.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.479 \end{align}
+l.507 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.10.3
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.479 \end{align}
-                 
+l.507 \end{align}
+                  [20]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.10.4
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.483 \end{align}
-                  [16]
-<figs/plot.pdf, id=407, 462.52798pt x 346.89601pt>
+l.511 \end{align}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{equation.10.5
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.516 \end{align}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{equation.10.6
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.524 \end{align}
+                 
+<figs/plot.pdf, id=588, 462.52798pt x 346.89601pt>
 File: figs/plot.pdf Graphic file (type pdf)
 <use figs/plot.pdf>
-Package pdftex.def Info: figs/plot.pdf  used on input line 516.
+Package pdftex.def Info: figs/plot.pdf  used on input line 544.
 (pdftex.def)             Requested size: 273.14647pt x 204.86801pt.
-[17 <./figs/plot.pdf>]
+[21]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.11.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.535 \end{align}
+l.563 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.11.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.540 \end{align}
+l.568 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.11.3
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.548 \end{align}
+l.576 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.11.4
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.548 \end{align}
+l.576 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.11.5
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.548 \end{align}
-                 
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11.6
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.548 \end{align}
-                 
+l.576 \end{align}
+                  [22 <./figs/plot.pdf>]
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 5
-54.
+82.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -1594,37 +1641,43 @@ File: lstlang1.sty 2025/11/14 1.11b listings language file
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
 )
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 5
-56.
+84.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 5
-56.
+84.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 556.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 584.
 LaTeX Font Info:    Trying to load font information for OML+ptm on input line 5
-59.
+87.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 559.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 587.
 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.12.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.578 \end{align}
-                  [18] [19]
+l.606 \end{align}
+                  [23]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.14.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.639 \end{align}
-                  (./tables/q15/truth_table.tex
+l.667 \end{align}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{equation.14.2
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.667 \end{align}
+                  [24] (./tables/q15/truth_table.tex
 \gnumericColE=\skip85
 \gnumericColF=\skip86
 \gnumericColG=\skip87
@@ -1632,25 +1685,25 @@ l.639 \end{align}
 \gnumericColI=\skip89
 \gnumericColJ=\skip90
 \gnumericColK=\skip91
-) [20] (./figs/q15_kmap.tex)
+) (./figs/q15_kmap.tex)
 pdfTeX warning (ext4): destination with the same identifier (name{equation.15.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.695 \end{align}
-                 
+l.718 \end{align}
+                  [25]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.16.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.722 \end{align}
+l.750 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.16.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.722 \end{align}
-                  [21] [22] (./tables/q19/player.tex
+l.750 \end{align}
+                  [26] (./tables/q19/player.tex
 
 Package hhline Warning: the letter a ignored in \hhline argument
 (hhline)                 on input line 76.
@@ -1811,38 +1864,71 @@ Package hhline Warning: the letter r ignored in \hhline argument
 Package hhline Warning: the letter e ignored in \hhline argument
 (hhline)                 on input line 100.
 
-) (./tables/q19/coach.tex) (./tables/q19/team.tex) (./tables/q19/members.tex [2
-3]) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+ignored error: Infinite glue shrinkage found in box being split [27]) (./tables
+/q19/coach.tex) (./tables/q19/team.tex) (./tables/q19/members.tex) (/usr/share/
+texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
-) [24]
-<figs/errordistri.pdf, id=576, 414.91551pt x 327.20317pt>
+) [28]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.20.1
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.874 \end{align}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{equation.20.2
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.874 \end{align}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{equation.20.3
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.874 \end{align}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{equation.20.4
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.880 \end{align}
+                 
+<figs/errordistri.pdf, id=751, 409.62848pt x 327.20317pt>
 File: figs/errordistri.pdf Graphic file (type pdf)
 <use figs/errordistri.pdf>
-Package pdftex.def Info: figs/errordistri.pdf  used on input line 869.
-(pdftex.def)             Requested size: 273.14647pt x 215.40555pt.
-[25 <./figs/errordistri.pdf>]
-<figs/cdf_plot.pdf, id=641, 499.24329pt x 338.33276pt>
-File: figs/cdf_plot.pdf Graphic file (type pdf)
-<use figs/cdf_plot.pdf>
-Package pdftex.def Info: figs/cdf_plot.pdf  used on input line 920.
-(pdftex.def)             Requested size: 273.14647pt x 185.11302pt.
-[26]
-<figs/plt.pdf, id=659, 462.52798pt x 346.89601pt>
+Package pdftex.def Info: figs/errordistri.pdf  used on input line 897.
+(pdftex.def)             Requested size: 273.14647pt x 218.1815pt.
+[29]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21.1
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.918 \end{align}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21.2
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.918 \end{align}
+                  [30 <./figs/errordistri.pdf>]
+<figs/plt.pdf, id=822, 462.52798pt x 346.89601pt>
 File: figs/plt.pdf Graphic file (type pdf)
 <use figs/plt.pdf>
-Package pdftex.def Info: figs/plt.pdf  used on input line 931.
+Package pdftex.def Info: figs/plt.pdf  used on input line 948.
 (pdftex.def)             Requested size: 273.14647pt x 204.86801pt.
-[27 <./figs/cdf_plot.pdf> <./figs/plt.pdf>]
-<figs/cdf_grid_verification.pdf, id=746, 650.43pt x 397.485pt>
+[31 <./figs/plt.pdf>]
+<figs/cdf_grid_verification.pdf, id=877, 650.43pt x 397.485pt>
 File: figs/cdf_grid_verification.pdf Graphic file (type pdf)
 <use figs/cdf_grid_verification.pdf>
-Package pdftex.def Info: figs/cdf_grid_verification.pdf  used on input line 942
+Package pdftex.def Info: figs/cdf_grid_verification.pdf  used on input line 959
 .
 (pdftex.def)             Requested size: 273.14647pt x 166.92436pt.
-(./tables/q22/original_fsm.tex) [28 <./figs/cdf_grid_verification.pdf>] (./tabl
-es/q22/minimized_fsm.tex) (./figs/q22_fsm_diagram.tex) [29] (./figs/q23_sequent
-ial_circuit.tex) [30] [31] (./figs/q25_linked_list.tex) [32] (./tables/q26/digi
-t_trace.tex) (./figs/q27_graph.tex) [33]) [34] (./main.aux)
+(./tables/q22/original_fsm.tex) [32 <./figs/cdf_grid_verification.pdf>] (./figs
+/q22_fsm_diagram.tex) (./tables/q22/minimized_fsm.tex) (./figs/q22_kmap.tex) [3
+3] [34] (./figs/q22_circuit.tex) [35] (./figs/q23_sequential_circuit.tex) [36] 
+[37] (./figs/q25_linked_list.tex) [38] (./tables/q26/digit_trace.tex
+ignored error: Infinite glue shrinkage found in box being split [39]) (./figs/q
+27_graph.tex) [40]) [41] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
@@ -1851,35 +1937,36 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9EDE2DB45EF724C703DBA0DD943CA7E9;308.
  ) 
 Here is how much of TeX's memory you used:
- 55646 strings out of 467533
- 1323394 string characters out of 5422138
- 2211980 words of memory out of 5000000
- 83267 multiletter control sequences out of 15000+600000
- 667049 words of font info for 130 fonts, out of 8000000 for 9000
+ 55813 strings out of 467533
+ 1326663 string characters out of 5422138
+ 2217959 words of memory out of 5000000
+ 83381 multiletter control sequences out of 15000+600000
+ 672118 words of font info for 137 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,18n,118p,1194b,2787s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,18n,118p,1194b,2789s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
-pfb>
-Output written on main.pdf (34 pages, 388581 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
+imes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pf
+b>
+Output written on main.pdf (41 pages, 442509 bytes).
 PDF statistics:
- 1116 PDF objects out of 1200 (max. 8388607)
- 769 compressed objects within 8 object streams
- 440 named destinations out of 1000 (max. 500000)
- 168 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1291 PDF objects out of 1440 (max. 8388607)
+ 869 compressed objects within 9 object streams
+ 484 named destinations out of 1000 (max. 500000)
+ 178 words of extra memory for PDF output out of 10000 (max. 10000000)
 
