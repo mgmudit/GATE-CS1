@@ -1,10 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import shlex
 import subprocess
 import sympy as sp
 import sys
-import os
 
 # Import line_gen from CoordGeo
 sys.path.insert(0, "CoordGeo")
@@ -60,5 +58,3 @@ plt.legend()
 
 plt.savefig("intersec.pdf")
 plt.close()
-
-subprocess.run(shlex.split("open intersec.pdf"))
