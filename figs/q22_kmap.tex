@@ -1,0 +1,86 @@
+\begin{tabular}{cc}
+K-map for $D_2$ & K-map for $D_1$ \\[0.5em]
+% --- K-map for D2 ---
+\begin{tikzpicture}[scale=0.75, >=stealth]
+    \draw[thick] (0,0) grid (4,4);
+    \draw[thick] (0,4) -- (-1.0, 5.0);
+    \node at (-0.3, 4.6) [above right, inner sep=1pt, font=\small] {$Q_0 X$};
+    \node at (-0.7, 4.2) [below left, inner sep=1pt, font=\small] {$Q_2 Q_1$};
+    
+    \node at (0.5, 4.35) {\small 00}; \node at (1.5, 4.35) {\small 01}; \node at (2.5, 4.35) {\small 11}; \node at (3.5, 4.35) {\small 10};
+    \node at (-0.35, 3.5) {\small 00}; \node at (-0.35, 2.5) {\small 01}; \node at (-0.35, 1.5) {\small 11}; \node at (-0.35, 0.5) {\small 10};
+    
+    % Row 00
+    \node at (0.5, 3.5) {0}; \node at (1.5, 3.5) {0}; \node at (2.5, 3.5) {0}; \node at (3.5, 3.5) {0};
+    % Row 01
+    \node at (0.5, 2.5) {1}; \node at (1.5, 2.5) {0}; \node at (2.5, 2.5) {0}; \node at (3.5, 2.5) {0};
+    % Row 11
+    \node at (0.5, 1.5) {d}; \node at (1.5, 1.5) {d}; \node at (2.5, 1.5) {d}; \node at (3.5, 1.5) {d};
+    % Row 10
+    \node at (0.5, 0.5) {1}; \node at (1.5, 0.5) {0}; \node at (2.5, 0.5) {d}; \node at (3.5, 0.5) {d};
+    
+    % Group
+    \draw[thick, dotted, rounded corners=6pt] (0.12, 0.12) rectangle (0.88, 2.88);
+\end{tikzpicture}
+&
+% --- K-map for D1 ---
+\begin{tikzpicture}[scale=0.75, >=stealth]
+    \draw[thick] (0,0) grid (4,4);
+    \draw[thick] (0,4) -- (-1.0, 5.0);
+    \node at (-0.3, 4.6) [above right, inner sep=1pt, font=\small] {$Q_0 X$};
+    \node at (-0.7, 4.2) [below left, inner sep=1pt, font=\small] {$Q_2 Q_1$};
+    
+    \node at (0.5, 4.35) {\small 00}; \node at (1.5, 4.35) {\small 01}; \node at (2.5, 4.35) {\small 11}; \node at (3.5, 4.35) {\small 10};
+    \node at (-0.35, 3.5) {\small 00}; \node at (-0.35, 2.5) {\small 01}; \node at (-0.35, 1.5) {\small 11}; \node at (-0.35, 0.5) {\small 10};
+    
+    \node at (0.5, 3.5) {1}; \node at (1.5, 3.5) {0}; \node at (2.5, 3.5) {0}; \node at (3.5, 3.5) {1};
+    \node at (0.5, 2.5) {0}; \node at (1.5, 2.5) {0}; \node at (2.5, 2.5) {0}; \node at (3.5, 2.5) {1};
+    \node at (0.5, 1.5) {d}; \node at (1.5, 1.5) {d}; \node at (2.5, 1.5) {d}; \node at (3.5, 1.5) {d};
+    \node at (0.5, 0.5) {0}; \node at (1.5, 0.5) {1}; \node at (2.5, 0.5) {d}; \node at (3.5, 0.5) {d};
+    
+    % Groups
+    \draw[thick, dotted, rounded corners=6pt] (3.12, 1.12) rectangle (3.88, 3.88);
+    \draw[thick, dotted, rounded corners=6pt] (1.12, 0.12) rectangle (2.88, 1.88);
+\end{tikzpicture}
+\\[2.0em]
+K-map for $D_0$ & K-map for $f$ \\[0.5em]
+% --- K-map for D0 ---
+\begin{tikzpicture}[scale=0.75, >=stealth]
+    \draw[thick] (0,0) grid (4,4);
+    \draw[thick] (0,4) -- (-1.0, 5.0);
+    \node at (-0.3, 4.6) [above right, inner sep=1pt, font=\small] {$Q_0 X$};
+    \node at (-0.7, 4.2) [below left, inner sep=1pt, font=\small] {$Q_2 Q_1$};
+    
+    \node at (0.5, 4.35) {\small 00}; \node at (1.5, 4.35) {\small 01}; \node at (2.5, 4.35) {\small 11}; \node at (3.5, 4.35) {\small 10};
+    \node at (-0.35, 3.5) {\small 00}; \node at (-0.35, 2.5) {\small 01}; \node at (-0.35, 1.5) {\small 11}; \node at (-0.35, 0.5) {\small 10};
+    
+    \node at (0.5, 3.5) {1}; \node at (1.5, 3.5) {1}; \node at (2.5, 3.5) {0}; \node at (3.5, 3.5) {0};
+    \node at (0.5, 2.5) {0}; \node at (1.5, 2.5) {0}; \node at (2.5, 2.5) {1}; \node at (3.5, 2.5) {1};
+    \node at (0.5, 1.5) {d}; \node at (1.5, 1.5) {d}; \node at (2.5, 1.5) {d}; \node at (3.5, 1.5) {d};
+    \node at (0.5, 0.5) {0}; \node at (1.5, 0.5) {0}; \node at (2.5, 0.5) {d}; \node at (3.5, 0.5) {d};
+    
+    % Groups
+    \draw[thick, dotted, rounded corners=6pt] (0.12, 3.12) rectangle (1.88, 3.88);
+    \draw[thick, dotted, rounded corners=6pt] (2.12, 1.12) rectangle (3.88, 2.88);
+\end{tikzpicture}
+&
+% --- K-map for f ---
+\begin{tikzpicture}[scale=0.75, >=stealth]
+    \draw[thick] (0,0) grid (4,4);
+    \draw[thick] (0,4) -- (-1.0, 5.0);
+    \node at (-0.3, 4.6) [above right, inner sep=1pt, font=\small] {$Q_0 X$};
+    \node at (-0.7, 4.2) [below left, inner sep=1pt, font=\small] {$Q_2 Q_1$};
+    
+    \node at (0.5, 4.35) {\small 00}; \node at (1.5, 4.35) {\small 01}; \node at (2.5, 4.35) {\small 11}; \node at (3.5, 4.35) {\small 10};
+    \node at (-0.35, 3.5) {\small 00}; \node at (-0.35, 2.5) {\small 01}; \node at (-0.35, 1.5) {\small 11}; \node at (-0.35, 0.5) {\small 10};
+    
+    \node at (0.5, 3.5) {0}; \node at (1.5, 3.5) {0}; \node at (2.5, 3.5) {0}; \node at (3.5, 3.5) {0};
+    \node at (0.5, 2.5) {1}; \node at (1.5, 2.5) {0}; \node at (2.5, 2.5) {1}; \node at (3.5, 2.5) {1};
+    \node at (0.5, 1.5) {d}; \node at (1.5, 1.5) {d}; \node at (2.5, 1.5) {d}; \node at (3.5, 1.5) {d};
+    \node at (0.5, 0.5) {0}; \node at (1.5, 0.5) {1}; \node at (2.5, 0.5) {d}; \node at (3.5, 0.5) {d};
+    
+    % Groups
+    \draw[thick, dotted, rounded corners=6pt] (2.12, 1.12) rectangle (3.88, 2.88);
+    \draw[thick, dotted, rounded corners=6pt] (1.12, 0.12) rectangle (2.88, 1.88);
+\end{tikzpicture}
+\end{tabular}

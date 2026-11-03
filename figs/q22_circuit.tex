@@ -1,0 +1,161 @@
+\definecolor{boxfill}{RGB}{229,233,240}
+\tikzset{
+  wire/.style={line width=0.6pt},
+  gate/.style={line width=0.6pt, draw=black, fill=white},
+  arr/.style={line width=0.6pt, -{Triangle[length=4.2pt,width=3.6pt]}},
+  gl/.style={font=\fontsize{4.6}{5}\selectfont, inner sep=0pt, outer sep=0pt},
+  sl/.style={font=\fontsize{5.6}{6}\selectfont, inner sep=0pt, outer sep=0pt},
+  hd/.style={font=\fontsize{5.2}{6}\selectfont, inner sep=0pt, outer sep=0pt},
+  ttl/.style={font=\fontsize{7}{8}\selectfont\bfseries, inner sep=0pt},
+}
+\newcommand{\dotat}[2]{\fill (#1,#2) circle (2.8);}
+\newcommand{\dff}[3]{% top y, name, Q-name
+  \draw[line width=0.8pt, fill=white] (560,#1) rectangle (660,#1+85);
+  \node[hd] at (610,#1-10) {D Flip-Flop #2};
+  \node[sl] at (577,#1+17) {D};
+  \node[sl] at (643,#1+17) {Q};
+  \node[sl] at (643,#1+57) {Q\textquotesingle{}};
+  \node[sl] at (584,#1+57) {C};
+  \draw[wire] (560,#1+49) -- (569,#1+57) -- (560,#1+65);}
+\begin{tikzpicture}[x=0.0155cm, y=-0.0155cm]
+
+%\fill[boxfill] (318,70) rectangle (500,212);
+%\fill[boxfill] (318,232) rectangle (500,688);
+\node[hd] at (409,60) {OUTPUT LOGIC (COMBINATIONAL)};
+\node[hd] at (409,701) {NEXT-STATE LOGIC (COMBINATIONAL)};
+\node[sl] at (60,55) {X};
+\node[sl] at (104,55) {X\textquotesingle{}};
+\node[sl] at (146,55) {Q2};
+\node[sl] at (170,55) {Q2\textquotesingle{}};
+\node[sl] at (194,55) {Q1};
+\node[sl] at (218,55) {Q1\textquotesingle{}};
+\node[sl] at (242,55) {Q0};
+\node[sl] at (266,55) {Q0\textquotesingle{}};
+\draw[wire] (60,65) -- (60,539);
+\draw[wire] (104,65) -- (104,458);
+\draw[wire] (146,65) -- (146,785);
+\draw[wire] (170,65) -- (170,771);
+\draw[wire] (194,65) -- (194,757);
+\draw[wire] (218,65) -- (218,743);
+\draw[wire] (242,65) -- (242,729);
+\draw[wire] (266,65) -- (266,715);
+\draw[wire] (194,81) -- (330,81);
+\dotat{194}{81}
+\draw[wire] (242,99) -- (330,99);
+\dotat{242}{99}
+\draw[wire] (194,131) -- (330,131);
+\dotat{194}{131}
+\draw[wire] (104,149) -- (330,149);
+\dotat{104}{149}
+\draw[wire] (146,181) -- (330,181);
+\dotat{146}{181}
+\draw[wire] (60,199) -- (330,199);
+\dotat{60}{199}
+\draw[wire] (104,253) -- (330,253);
+\dotat{104}{253}
+\draw[wire] (266,265) -- (330,265);
+\dotat{266}{265}
+\draw[wire] (146,277) -- (330,277);
+\dotat{146}{277}
+\draw[wire] (104,313) -- (330,313);
+\dotat{104}{313}
+\draw[wire] (266,325) -- (330,325);
+\dotat{266}{325}
+\draw[wire] (194,337) -- (330,337);
+\dotat{194}{337}
+\draw[wire] (104,401) -- (330,401);
+\dotat{104}{401}
+\draw[wire] (242,419) -- (330,419);
+\dotat{242}{419}
+\draw[wire] (104,458) -- (330,458);
+\dotat{104}{458}
+\draw[wire] (170,470) -- (330,470);
+\dotat{170}{470}
+\draw[wire] (218,482) -- (330,482);
+\dotat{218}{482}
+\draw[wire] (146,521) -- (330,521);
+\dotat{146}{521}
+\draw[wire] (60,539) -- (330,539);
+\dotat{60}{539}
+\draw[wire] (146,588) -- (342,588);
+\dotat{146}{588}
+\draw[wire] (194,600) -- (342,600);
+\dotat{194}{600}
+\draw[wire] (242,612) -- (342,612);
+\dotat{242}{612}
+\draw[wire] (194,646) -- (330,646);
+\dotat{194}{646}
+\draw[wire] (242,664) -- (330,664);
+\dotat{242}{664}
+\node[sl, align=center] at (22,62) {DATA\\INPUT};
+\draw[wire] (46,65) -- (60,65);
+\dotat{60}{65}
+\draw[wire] (60,65) -- (70,65);
+\draw[gate] (70,56) -- (88,65) -- (70,74) -- cycle;
+\draw[gate] (91.5,65) circle (3.5);
+\draw[wire] (95,65) -- (104,65);
+\node[sl, align=center] at (22,225) {CLOCK\\CLK};
+\draw[wire] (46,225) -- (540,225) -- (540,667);
+\draw[wire] (540,335) -- (560,335);
+\draw[wire] (540,510) -- (560,510);
+\draw[wire] (540,667) -- (560,667);
+\dotat{540}{510}
+\dotat{540}{667}
+\draw[wire] (373,90) -- (405,90) -- (405,128) -- (452,128);
+\draw[wire] (373,140) -- (452,140);
+\draw[wire] (373,190) -- (405,190) -- (405,152) -- (452,152);
+\draw[wire] (378,265) -- (405,265) -- (405,286) -- (452,286);
+\draw[wire] (378,325) -- (405,325) -- (405,304) -- (452,304);
+\draw[wire] (373,410) -- (405,410) -- (405,458) -- (452,458);
+\draw[wire] (378,470) -- (452,470);
+\draw[wire] (373,530) -- (405,530) -- (405,482) -- (452,482);
+\draw[wire] (385,600) -- (405,600) -- (405,618) -- (452,618);
+\draw[wire] (373,655) -- (405,655) -- (405,636) -- (452,636);
+\draw[arr] (488,295) -- (560,295);
+\node[sl] at (512,287) {D2};
+\draw[arr] (488,470) -- (560,470);
+\node[sl] at (512,462) {D1};
+\draw[arr] (488,627) -- (560,627);
+\node[sl] at (512,619) {D0};
+\draw[arr] (488,140) -- (720,140);
+\node[sl] at (750,131) {OUTPUT};
+\node[sl] at (750,149) {f};
+\dff{278}{1}{Q2}
+\dff{453}{2}{Q1}
+\dff{610}{3}{Q0}
+\draw[wire] (660,295) -- (732,295) -- (732,785) -- (146,785);
+\draw[wire] (660,335) -- (720,335) -- (720,771) -- (170,771);
+\draw[wire] (660,470) -- (708,470) -- (708,757) -- (194,757);
+\draw[wire] (660,510) -- (696,510) -- (696,743) -- (218,743);
+\draw[wire] (660,627) -- (684,627) -- (684,729) -- (242,729);
+\draw[wire] (660,667) -- (672,667) -- (672,715) -- (266,715);
+\draw[gate] (330,73) -- (356,73) arc[start angle=-90,end angle=90,radius=17] -- (330,107) -- cycle;
+\node[gl] at (348,90) {AND};
+\draw[gate] (330,123) -- (356,123) arc[start angle=-90,end angle=90,radius=17] -- (330,157) -- cycle;
+\node[gl] at (348,140) {AND};
+\draw[gate] (330,173) -- (356,173) arc[start angle=-90,end angle=90,radius=17] -- (330,207) -- cycle;
+\node[gl] at (348,190) {AND};
+\draw[gate] (440,118) .. controls (464,118) and (480,128.34) .. (488,140) .. controls (480,151.66) and (464,162) .. (440,162) .. controls (452,150.34) and (452,129.66) .. cycle;
+\node[gl] at (464,140) {OR};
+\draw[gate] (330,243) -- (356,243) arc[start angle=-90,end angle=90,radius=22] -- (330,287) -- cycle;
+\node[gl] at (348,265) {AND};
+\draw[gate] (330,303) -- (356,303) arc[start angle=-90,end angle=90,radius=22] -- (330,347) -- cycle;
+\node[gl] at (348,325) {AND};
+\draw[gate] (440,278) .. controls (464,278) and (480,285.99) .. (488,295) .. controls (480,304.01) and (464,312) .. (440,312) .. controls (452,302.99) and (452,287.01) .. cycle;
+\node[gl] at (464,295) {OR};
+\draw[gate] (330,393) -- (356,393) arc[start angle=-90,end angle=90,radius=17] -- (330,427) -- cycle;
+\node[gl] at (348,410) {AND};
+\draw[gate] (330,448) -- (356,448) arc[start angle=-90,end angle=90,radius=22] -- (330,492) -- cycle;
+\node[gl] at (348,470) {AND};
+\draw[gate] (330,513) -- (356,513) arc[start angle=-90,end angle=90,radius=17] -- (330,547) -- cycle;
+\node[gl] at (348,530) {AND};
+\draw[gate] (440,448) .. controls (464,448) and (480,458.34) .. (488,470) .. controls (480,481.66) and (464,492) .. (440,492) .. controls (452,480.34) and (452,459.66) .. cycle;
+\node[gl] at (464,470) {OR};
+\draw[gate] (330,578) .. controls (354,578) and (370,588.34) .. (378,600) .. controls (370,611.66) and (354,622) .. (330,622) .. controls (342,610.34) and (342,589.66) .. cycle;
+\node[gl] at (354,600) {NOR};
+\draw[gate] (381.5,600) circle (3.5);
+\draw[gate] (330,638) -- (356,638) arc[start angle=-90,end angle=90,radius=17] -- (330,672) -- cycle;
+\node[gl] at (348,655) {AND};
+\draw[gate] (440,610) .. controls (464,610) and (480,617.99) .. (488,627) .. controls (480,636.01) and (464,644) .. (440,644) .. controls (452,634.99) and (452,619.01) .. cycle;
+\node[gl] at (464,627) {OR};
+\end{tikzpicture}
